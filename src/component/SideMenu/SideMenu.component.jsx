@@ -59,7 +59,7 @@ function SideMenuContent(props) {
       <MailOutline></MailOutline>
     </Grid>
     <Grid item xs={8} className={classes.mailText}>
-        vipin@gmail.com
+        vip1509ku@gmail.com
     </Grid>
     <Grid item xs={12} className={classes.icons}>
         <div>
