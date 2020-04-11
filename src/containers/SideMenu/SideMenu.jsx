@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import SideMenuContent from './../../component/SideMenu/SideMenu.component';
+import { Context } from './../../App';
 
 const drawerWidth = 240;
 
@@ -66,7 +67,9 @@ function ResponsiveDrawer(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-            <SideMenuContent />
+            <Context.Provider value={{name: 'vipin'}}>
+              <SideMenuContent />
+            </Context.Provider>
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">

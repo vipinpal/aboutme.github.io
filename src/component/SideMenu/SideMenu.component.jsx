@@ -3,6 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Tooltip } from '@material-ui/core';
 import { MailOutline, Facebook, LinkedIn, GitHub } from '@material-ui/icons';
+import { Context } from './../../App';
 
 const useStyles = makeStyles(theme => ({
   avatar: {
@@ -52,9 +53,13 @@ function SideMenuContent(props) {
     <Grid item className={classes.avatar}>
       <Avatar alt="Remy Sharp" src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/76199474_2679063768821838_8362746932463927296_o.jpg?_nc_cat=107&_nc_ohc=ZYTNM0fqjFYAX8JVfu5&_nc_ht=scontent-sin6-2.xx&oh=af06ff80016885be230ffe4f0ca7517c&oe=5ED1A160" className={classes.large} />
     </Grid>
-    <Grid item xs={12} className={classes.name}>
-      Vipin Kumar
-    </Grid>
+    <Context.Consumer>
+      {value =>
+      <Grid item xs={12} className={classes.name}>
+        {value.name}
+      </Grid>
+      }
+    </Context.Consumer>
     <Grid item xs={4} className={classes.mailIcon}>
       <MailOutline></MailOutline>
     </Grid>

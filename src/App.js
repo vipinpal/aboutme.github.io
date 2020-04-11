@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
-import SideMenu from './containers/SideMenu/SideMenu';
+import MainDrawer from './containers/MainMenu/MainMenu';
 
+
+export const Context = React.createContext({
+  name: 'Vipin Pal'
+});
 
 function App() {
   return (
     <div className="App">
-      <SideMenu />
+      <MainDrawer />
     </div>
   );
 }
