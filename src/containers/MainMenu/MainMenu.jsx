@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import { Grid, Chip} from '@material-ui/core';
+import { Grid, Chip, Divider, CardHeader, CardActions, Typography, IconButton } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -19,6 +18,11 @@ import {
     LinkedIn,
     GitHub,
     Twitter,
+    DateRangeRounded,
+    SchoolRounded,
+    AssignmentRounded,
+    Favorite,
+    Share,
 } from '@material-ui/icons';
 
 
@@ -145,7 +149,7 @@ export default function RecipeReviewCard() {
                     <div style={{ backgroundColor: 'inherit', paddingLeft: 14 }}>
                         <Card className={classes.root1}>
                             <CardContent>
-                                <div style={{ color: '#009688', fontSize: 30, fontWeight: 400 }}>
+                                <div style={{ color: '#009688', fontSize: 30, fontWeight: 400, paddingBottom: 15, position: 'relative' }}>
                                     <WorkRounded style={{ color: '#009688', fontSize: 40 }} />
                                     <span style={{
                                         position: 'absolute',
@@ -153,8 +157,109 @@ export default function RecipeReviewCard() {
                                         marginLeft: 10,
                                     }}>Work Experience</span>
                                 </div>
+                                <div style={{ paddingLeft: 15 }}>
+                                    <h5 style={{ color: '#000',  opacity: 0.6, fontSize: 18, fontWeight: 400, margin: 0 }}><b>Full Stack Developer / datamatics.com</b></h5>
+                                    <div style={{
+                                        margin: '10px 0',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'flex-start',
+                                        }}>
+                                        <DateRangeRounded style={{ color: '#009688' }} />
+                                        <span style={{
+                                            paddingTop: 4,
+                                            paddingLeft: 10
+                                        }}>Apr 2017 - <Chip className={classes.chip} style={{ margin: 0 }} label={"Current"} /></span>
+                                    </div>
+                                    <div>
+                                        Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+                                    </div>
+                                </div>
+                                <Divider style={{ margin: '24px 0 40px 0'}}/>
+                                <div style={{ paddingLeft: 15 }}>
+                                    <h5 style={{ color: '#000',  opacity: 0.6, fontSize: 18, fontWeight: 400, margin: 0 }}><b>Full Stack Developer / noesyssoftware.com</b></h5>
+                                    <div style={{
+                                        margin: '10px 0',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'flex-start',
+                                        }}>
+                                        <DateRangeRounded style={{ color: '#009688' }} />
+                                        <span style={{
+                                            paddingTop: 4,
+                                            paddingLeft: 10
+                                        }}>Dec 2015 - Apr 2017</span>
+                                    </div>
+                                    <div>
+                                        Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+                                    </div>
+                                </div>
                             </CardContent>
                     </Card>
+                    <Card className={classes.root1}>
+                            <CardContent>
+                                <div style={{ color: '#009688', fontSize: 30, fontWeight: 400, paddingBottom: 15, position: 'relative' }}>
+                                    <SchoolRounded style={{ color: '#009688', fontSize: 40 }} />
+                                    <span style={{
+                                        position: 'absolute',
+                                        marginTop: 5,
+                                        marginLeft: 10,
+                                    }}>Education</span>
+                                </div>
+                                <div style={{ paddingLeft: 15 }}>
+                                    <h5 style={{ color: '#000',  opacity: 0.6, fontSize: 18, fontWeight: 400, margin: 0 }}><b>Jaypee Institute of Information Technology, Noida</b></h5>
+                                    <div style={{
+                                        margin: '10px 0',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'flex-start',
+                                        }}>
+                                        <DateRangeRounded style={{ color: '#009688' }} />
+                                        <span style={{
+                                            paddingTop: 4,
+                                            paddingLeft: 10
+                                        }}>Jul 2011 - May 2015</span>
+                                    </div>
+                                    <div>
+                                        Bachelor Degree
+                                    </div>
+                                </div>
+                            </CardContent>
+                    </Card>
+                    <Card className={classes.root1}>
+                            <CardContent>
+                                <div style={{ color: '#009688', fontSize: 30, fontWeight: 400, position: 'relative' }}>
+                                    <AssignmentRounded style={{ color: '#009688', fontSize: 40 }} />
+                                    <span style={{
+                                        position: 'absolute',
+                                        marginTop: 5,
+                                        marginLeft: 10,
+                                    }}>Projects</span>
+                                </div>
+                            </CardContent>
+                    </Card>
+
+                    <Card className={classes.root}>
+                        <CardHeader
+                            title="Spireon"
+                            subheader="September 14, 2016"
+                        />
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                            This impressive paella is a perfect party dish and a fun meal to cook together with your
+                            guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                            </Typography>
+                        </CardContent>
+                        <CardActions disableSpacing>
+                            <IconButton aria-label="add to favorites">
+                            <Favorite />
+                            </IconButton>
+                            <IconButton aria-label="share">
+                            <Share />
+                            </IconButton>
+                        </CardActions>
+                        </Card>
+                        
                     </div>
                 </Grid>
             </Grid>
